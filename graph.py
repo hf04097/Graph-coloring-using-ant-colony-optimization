@@ -35,7 +35,7 @@ class ColorState:
         rawRew = len(self.distinctColors)
         if rawRew > 26:
             return 0
-        return (26 - rawRew) * 100
+        return (26 - rawRew)
 
     def rewardMetric2(self):
         rawRew = len(self.distinctColors)
@@ -44,7 +44,7 @@ class ColorState:
     def getReward(self):
         if not self.done:
             raise Exception("Reward called before done")
-        return self.rewardMetric1()
+        return self.rewardMetric2()
 
     def getPerformance(self):
         if not self.done:
