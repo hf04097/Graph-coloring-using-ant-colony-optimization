@@ -37,8 +37,6 @@ class ColorState:
 
     def rewardMetric2(self):
         rawRew = len(set(self.colors))
-        if rawRew < 20:
-          return 50
         return 20 / (rawRew)
 
     def getReward(self):
